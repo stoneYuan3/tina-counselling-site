@@ -7,6 +7,18 @@ const branch =
   process.env.HEAD ||
   "main";
 
+const ctaTemplate:{
+  name:string,
+  label:string,
+  fields:any
+} = {
+  name: "cta",
+  label: "Call to Action",
+  fields: [
+    { type: "string", name: "button", label: "Button Text" }
+  ]
+};
+
 export default defineConfig({
   branch,
 
@@ -58,6 +70,53 @@ export default defineConfig({
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
+      {
+        name: "home",
+        label: "Home Page",
+        path: "content/pages",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Page Title",
+            required: true
+          },
+          {
+            type: "object",
+            name: "page_blocks",
+            label: "Page Blocks",
+            list: true,
+            templates: [
+              {
+                name: "banner_home",
+                label: "Home Banner",
+                fields: [
+                  { type: "string", name: "banner_header", label: "Banner Header" },
+                  { type: "image", name: "banner_img", label: "Banner Image" },
+                  { type: "string", name: "banner_button_text", label: "Button Text" },
+                  { type: "string", name: "banner_url", label: "Button URL" },
+                ]
+              },
+              {
+                name: "featured_quote",
+                label: "Featured Quote",
+                fields: [
+                  { type: "string", name: "line", label: "Line" }
+                ]
+              },
+              {
+                name: "twocol_paragraph",
+                label: "Two Columns Text Block",
+                fields: [
+                  { type: "rich-text", name: "title", label: "Title" },
+                  { type: "rich-text", name: "body", label: "Body" },
+                ]
+              },
+              ctaTemplate,
+            ]
+          }
+        ]
+      }
     ],
   },
 });
