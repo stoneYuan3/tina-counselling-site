@@ -15,9 +15,36 @@ const ctaTemplate:{
   name: "cta",
   label: "Call to Action",
   fields: [
-    { type: "string", name: "button", label: "Button Text" }
+    { type: "image", name: "cta_img", label: "CTA Image" },
+    { type: "string", name: "cta_title", label: "CTA Title", ui: { defaultValue: "Take the first step of your healing" }},
+    { type: "rich-text", name: "cta_body", label: "CTA Body"},
+    { type: "string", name: "button", label: "CTA Button Text" },
+    { type: "string", name: "button_link", label: "CTA Button Link"}
   ]
 };
+const pageBanner:{
+  name:string,
+  label:string,
+  fields:any  
+} = {
+  name: "page_banner",
+  label: "Page Banner",
+  fields: [
+    { type: "image", name: "page_banner_img", label: "Banner Image" },
+    { type: "string", name: "page_banner_title", label: "Banner Title"},
+  ]
+}
+const richTextArticle:{
+  name:string,
+  label:string,
+  fields:any   
+} = {
+  name: "article_body",
+  label: "Body",
+  fields: [
+    { type: "rich-text", name: "article_body_field", label: "Body"},
+  ]
+}
 
 export default defineConfig({
   branch,
@@ -73,7 +100,7 @@ export default defineConfig({
       {
         name: "home",
         label: "Home Page",
-        path: "content/pages",
+        path: "content/home",
         fields: [
           {
             type: "string",
@@ -115,7 +142,36 @@ export default defineConfig({
               ctaTemplate,
             ]
           }
-        ]
+        ],
+        ui: {
+          router: ({ document }) => '/',  // Points to your home page route
+        }
+      },
+      {
+        name: "about",
+        label: "About Page",
+        path: "content/about",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Page Title",
+            required: true
+          },
+          {
+            type: "object",
+            name: "page_blocks",
+            label: "Page Blocks",
+            list: true,
+            templates: [
+              pageBanner,
+              richTextArticle
+            ]
+          }
+        ],
+        ui: {
+          router: ({ document }) => '/about',
+        }        
       }
     ],
   },
