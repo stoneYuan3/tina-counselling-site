@@ -3,6 +3,7 @@
 import { useTina } from 'tinacms/dist/react'
 import { PageBanner } from "@/components/blocks/PageBanner"
 import { RichTextArticle } from "@/components/blocks/RichTextArticle"
+import { CTA } from "@/components/blocks/CTA"
 
 export default function ClientAboutPage(props:any) {
   // useTina enables live editing
@@ -25,6 +26,9 @@ export default function ClientAboutPage(props:any) {
 
           case "AboutPage_blocksArticle_body":
             return <RichTextArticle key={index} {...block} />
+
+          case "AboutPage_blocksCta":
+            return <CTA key={index} {...block} />
 
           default:
             return null

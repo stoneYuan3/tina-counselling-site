@@ -1,13 +1,11 @@
 export function Banner({
   banner_header,
   banner_img,
-  banner_button_text,
-  banner_url
+  banner_button
 }: {
   banner_header?: string | null;
   banner_img?: string | null;
-  banner_button_text?: string | null;
-  banner_url?: string | null;
+  banner_button?: { button_text?: string | null; button_url?: string | null } | null;
 }) {
   return (
     <section className="banner min-h-screen flex items-center justify-center bg-gray-100 relative">
@@ -28,12 +26,12 @@ export function Banner({
           </h1>
         )}
 
-        {banner_button_text && banner_url && (
+        {banner_button?.button_text && (
           <a
-            href={banner_url}
+            href={banner_button.button_url ?? undefined}
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
           >
-            {banner_button_text}
+            {banner_button.button_text}
           </a>
         )}
       </div>
