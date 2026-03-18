@@ -37,7 +37,7 @@ page_blocks:
 
           ICBC clients: we offer no-fee direct billing for ICBC-covered sessions.
     _template: rates_policies
-  - cta_img: ./img/cta.png
+  - cta_img: /img/cta.png
     cta_title: Ready to get started?
     cta_body: |
       Maecenas quis quam felis. Nunc aliquet neque sit amet dapibus malesuada. Nunc fermentum, elit vitae commodo tempor, enim elit facilisis risus.

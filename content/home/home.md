@@ -14,7 +14,7 @@ page_blocks:
     body: |
       Our practitioner is a dedicated professional with 15+ years of clinical experience working with children, youth, young adults, and families. Her work includes mental health counselling for individuals, family therapy, crisis stabilization, and case management.
     _template: twocol_paragraph
-  - cta_img: ./img/cta.png
+  - cta_img: /img/cta.png
     cta_title: Ready to get started?
     cta_body: |
       Maecenas quis quam felis. Nunc aliquet neque sit amet dapibus malesuada. Nunc fermentum, elit vitae commodo tempor, enim elit facilisis risus.

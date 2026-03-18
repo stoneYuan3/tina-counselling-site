@@ -42,7 +42,7 @@ const ctaTemplate = {
           },
         ],
       },
-      cta_img: "./img/cta.png",
+      cta_img: "/img/cta.png",
       cta_button: { button_text: "Get Started", button_url: "/service" }
     }),
   },

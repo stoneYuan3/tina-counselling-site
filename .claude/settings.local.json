@@ -4,7 +4,13 @@
       "Bash(npm run dev)",
       "Bash(timeout 5)",
       "Bash(npx tsc --noEmit)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(grep -B 15 \"const src = \\\\`https://assets.tina.io\" /c/YUAN/programProj/tina-volney-site/node_modules/tinacms/dist/index.js)",
+      "Bash(grep -B 30 \"const src = \\\\`https://assets.tina.io\" /c/YUAN/programProj/tina-volney-site/node_modules/tinacms/dist/index.js)",
+      "Bash(find /c/YUAN/programProj/tina-volney-site/node_modules/tinacms -name *.ts -type f)",
+      "Bash(find /c/YUAN/programProj/tina-volney-site/node_modules/tinacms -name *store* -o -name *media* -type f)",
+      "Bash(grep -E \"\\\\.\\(js|ts\\)$\")",
+      "Bash(ls -la /c/YUAN/programProj/tina-volney-site/.tina*)"
     ],
     "deny": [],
     "ask": []
