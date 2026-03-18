@@ -1,7 +1,7 @@
 ---
 title: Home
 page_blocks:
-  - banner_header: 'Come, Let''s Get this Done'
+  - banner_header: 'Come, Let''s Get this Done!'
     banner_img: /shifaaz-shamoon-sLAk1guBG90-unsplash 1.png
     banner_button:
       button_text: Get Started
