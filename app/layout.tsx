@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Volney Counselling and Consulting",
-  description: "Mental health counselling and family therapy",
+  title: "Counselling Site",
+  description: "A Testing Site for Tina",
 };
 
 export default async function RootLayout({

@@ -10,9 +10,9 @@ page_blocks:
   - line: If you are feeling stuck - whether due to present challenges or unresolved past experiences - counselling can help.
     _template: featured_quote
   - title: |
-      Volney Counselling and Consulting specializes in **individual mental health counselling** and **family therapy.**
+      Consulting Site specializes in **individual mental health counselling** and **family therapy.**
     body: |
-      Volney is a dedicated practitioner with 15+ years of clinical experience working with children, youth, young adults, and families. Her work includes mental health counselling for individuals, family therapy, crisis stabilization, and case management.
+      Our practitioner is a dedicated professional with 15+ years of clinical experience working with children, youth, young adults, and families. Her work includes mental health counselling for individuals, family therapy, crisis stabilization, and case management.
     _template: twocol_paragraph
   - cta_img: ./img/cta.png
     cta_title: Ready to get started?
