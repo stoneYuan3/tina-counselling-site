@@ -1,6 +1,6 @@
 {
   "header": {
-    "site_title": "Volney Counselling and Consulting",
+    "site_title": "The Consulting Site",
     "nav": [
       {
         "label": "Home",
@@ -15,63 +15,14 @@
         "url": "/service"
       },
       {
-        "label": "FAQ",
-        "url": "/faq"
-      },
-      {
-        "label": "Resources",
-        "url": "/resources"
-      },
-      {
         "label": "Contact",
         "url": "/contact"
       }
     ]
   },
   "footer": {
-    "crisis_notice": {
-      "type": "root",
-      "children": [
-        {
-          "type": "p",
-          "children": [
-            {
-              "type": "text",
-              "text": "Volney Counseling & Consulting is NOT a crisis response service. In the event of a mental health crisis, please "
-            },
-            {
-              "type": "text",
-              "text": "phone or text 988, 24 hr/ 7",
-              "bold": true
-            },
-            {
-              "type": "text",
-              "text": " days a week."
-            }
-          ]
-        },
-        {
-          "type": "p",
-          "children": [
-            {
-              "type": "text",
-              "text": "If you need Mandarin or Cantonese service, you can say \"Mandarin or Cantonese\" and you will be connected to an interpreter."
-            }
-          ]
-        },
-        {
-          "type": "p",
-          "children": [
-            {
-              "type": "text",
-              "text": "Please phone 911 for emergency services.",
-              "italic": true
-            }
-          ]
-        }
-      ]
-    },
+    "crisis_notice": "The Consulting Site is NOT a crisis response service. In the event of a mental health crisis, please **phone or text 988, 24 hr/ 7** days a week.\n\nIf you need  Mandarin or Cantonese service, you can say \"Mandarin or Cantonese\" and you will be connected to an interpreter.\n\nPlease phone 911 for emergency services.\n",
     "land_acknowledgement": "We respectfully acknowledge that our place of work is within the ancestral, traditional and unceded territories of Coast Salish Peoples, specifically the Musqueam, Semiahmoo, Tsawwassen, Katzie, Kwantlen, Kwikwetlem, Qayqayt, and numerous Stó:lō Nations First Nations. We express our deep respect and gratitude to Indigenous peoples for stewarding the lands on which we live and work, and we commit to the ongoing work of truth and reconciliation.",
-    "copyright": "© 2026 Volney Counselling and Consulting"
+    "copyright": "© 2026 The Consulting Site"
   }
 }

@@ -8,8 +8,8 @@ const branch =
   "main";
 
 const buttonTemplate = {
-  name:"link_button",
-  label:"Button",
+  name: "link_button",
+  label: "Button",
   fields: [
     { type: "string", name: "button_text", label: "Button Text" },
     { type: "string", name: "button_url", label: "Button URL" },
@@ -47,27 +47,27 @@ const ctaTemplate = {
     }),
   },
 };
-const pageBanner:{
-  name:string,
-  label:string,
-  fields:any  
+const pageBanner: {
+  name: string,
+  label: string,
+  fields: any
 } = {
   name: "page_banner",
   label: "Page Banner",
   fields: [
     { type: "image", name: "page_banner_img", label: "Banner Image" },
-    { type: "string", name: "page_banner_title", label: "Banner Title"},
+    { type: "string", name: "page_banner_title", label: "Banner Title" },
   ]
 }
-const richTextArticle:{
-  name:string,
-  label:string,
-  fields:any   
+const richTextArticle: {
+  name: string,
+  label: string,
+  fields: any
 } = {
   name: "article_body",
   label: "Body",
   fields: [
-    { type: "rich-text", name: "article_body_field", label: "Body"},
+    { type: "rich-text", name: "article_body_field", label: "Body" },
   ]
 }
 const titleAndText = {
@@ -75,8 +75,8 @@ const titleAndText = {
   label: "Centered Title and Text",
   fields: [
     { type: "string", name: "title", label: "Title" },
-    { type: "rich-text", name: "center_body", label: "Body" },        
-  ]  
+    { type: "rich-text", name: "center_body", label: "Body" },
+  ]
 }
 export default defineConfig({
   branch,
@@ -191,7 +191,7 @@ export default defineConfig({
                 fields: [
                   { type: "string", name: "banner_header", label: "Banner Header" },
                   { type: "image", name: "banner_img", label: "Banner Image" },
-                  { type: "object", name: "banner_button", label: "Banner Button", fields: buttonTemplate.fields}
+                  { type: "object", name: "banner_button", label: "Banner Button", fields: buttonTemplate.fields }
 
                 ]
               },
@@ -243,7 +243,7 @@ export default defineConfig({
         ],
         ui: {
           router: ({ document }) => '/about',
-        }        
+        }
       },
       {
         name: "service",
@@ -277,16 +277,16 @@ export default defineConfig({
                 fields: [
                   { type: "object", name: "new_client", label: "New Client", fields: titleAndText.fields },
                   { type: "object", name: "return_client", label: "Returning Client", fields: titleAndText.fields },
-                  { type: 'string', name: "option_desc", label:"Option Description"},
-                  { type: "object", name: "book_link", label: "Book Link", fields: buttonTemplate.fields},
+                  { type: 'string', name: "option_desc", label: "Option Description" },
+                  { type: "object", name: "book_link", label: "Book Link", fields: buttonTemplate.fields },
                 ]
               },
               {
                 name: "rates_policies",
                 label: "Rates and Policy",
                 fields: [
-                  { type: "string", name: "policy_title", label: "Title"},
-                  { type: "object", name: "policy_item", label: "Policy Items", fields: titleAndText.fields, list:true}
+                  { type: "string", name: "policy_title", label: "Title" },
+                  { type: "object", name: "policy_item", label: "Policy Items", fields: titleAndText.fields, list: true }
                 ]
               },
               ctaTemplate
@@ -296,6 +296,46 @@ export default defineConfig({
         ui: {
           router: ({ document }) => '/service',
         }
+      },
+      {
+        name: "contact",
+        label: "Contact Page",
+        path: "content/contact",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Page Title",
+            required: true
+          },
+          {
+            type: "object",
+            name: "page_blocks",
+            label: "Page Blocks",
+            list: true,
+            templates: [
+              pageBanner,
+              {
+                name: "embed_text_block",
+                label: "Text with Embeds",
+                fields: [
+                  { type: "string", name: "embed_text_title", label: "Title" },
+                  { type: "rich-text", name: "embed_text_body", label: "Body" },
+                  {
+                    type: "string",
+                    name: "block_embed",
+                    label: "Embed Code",
+                    ui: {
+                      component: "textarea",
+                      description: "Paste the iframe embed code from Google Maps here"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+
       }
     ],
   },
